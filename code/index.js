@@ -43,9 +43,10 @@ function agregarTarea() {
     const texto = document.querySelector("#texto-tarea").value;
     const numero = cantidadDeTareas();
     const fechaHora = document.querySelector("#fecha-hora-tarea").value;
-    crearCheckTarea(numero, texto, fechaHora);
-    limpiarInputsTarea();
-
+    if(texto!=="" && fechaHora!==""){
+        crearCheckTarea(numero, texto, fechaHora);
+        limpiarInputsTarea();
+    }
 }
 
 function limpiarTareas() {
@@ -76,6 +77,7 @@ function enter(event){
         document.querySelector("#boton-agregar-tarea").click();
     }
 }
+
 const $botonLimpiarTareas = document.querySelector("#boton-limpiar-tareas");
 $botonLimpiarTareas.onclick = limpiarTareas;
 
