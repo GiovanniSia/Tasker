@@ -60,14 +60,14 @@ const $botonAgregarTarea = document.querySelector("#boton-agregar-tarea");
 $botonAgregarTarea.onclick = agregarTarea;
 
 //En vez de usar el boton "Agregar tarea" puedo usar la tecla "Enter"
-const input = document.querySelector("#texto-tarea");
-input.addEventListener("keyup", function (event) {
+const inputTexto = document.querySelector("#texto-tarea");
+inputTexto.addEventListener("keyup", function (event) {
     enter(event);
 });
 
 //En vez de usar el boton "Agregar tarea" puedo usar la tecla "Enter"
-const input2 = document.querySelector("#fecha-hora-tarea");
-input2.addEventListener("keyup", function (event) {
+const inputDateTime = document.querySelector("#fecha-hora-tarea");
+inputDateTime.addEventListener("keyup", function (event) {
     enter(event);
 });
 
